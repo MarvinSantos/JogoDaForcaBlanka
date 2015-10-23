@@ -3,17 +3,19 @@
   <head>
     <title>Jogo Da Forca</title>
     <meta   charset="UTF-8" />
-
+    <link rel="stylesheet" type="text/css" href="css\master.css" />
   </head>
 
   <body>
     <section>
       <h1>Game Over</h1>
       <h2>Pontuação</h2>
-      <button id="btnReiniciar" type="button">Reiniciar</button>
-      <button id="btnSair" type="button" >Sair</button>
-      <button class="btnTopFive">Top 5</button>
+      <button class="button" id="btnReiniciar" type="button">Reiniciar</button>
+      <button class="button" id="btnSair" type="button" onclick="sair();" >Sair</button>
+      <button class="btnTopFive button">Top 5</button>
     </section>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="funcoesDeBotoes.js"></script>
   </body>
 
 </html>
