@@ -1,0 +1,27 @@
+body {
+   position: relative;
+   width: 100%;
+}
+
+.gameOver{
+   left: 50%;
+   margin-left: -200px;
+   position: absolute;
+   width: 400px;
+}
+
+.centraliza{
+   text-align: center;
+   font-family: Arial;
+}
+
+.h1{
+   font-size: 30px;
+}
+
+.buttons {
+   left: 50%;
+   margin-left: -90px;
+   position: absolute;
+   width: 180px;
+}
