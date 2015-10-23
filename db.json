@@ -1,5 +1,5 @@
 {
-  "palavras": [
+    "palavras" : [
     {
       "palavra": "BERNARDES"
     },
@@ -26,6 +26,20 @@
     },
     {
       "palavra": "DIOGO"
+    }
+  ],
+  "pessoas" : [
+    {
+      "nome": "ASTROGILDO",
+      "pontos": 0
+    },
+    {
+      "nome": "JOAO",
+      "pontos": 0
+    },
+    {
+      "nome": "JUCA",
+      "pontos": 0
     }
   ]
 }
