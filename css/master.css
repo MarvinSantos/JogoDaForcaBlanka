@@ -1,9 +1,9 @@
-#text {
+.text {
    padding: 7px 14px 7px 14px;
    border-radius: 13px;
 }
 
-#button {
+.button {
    font-family: Arial;
    color: #ffffff;
    font-size: 20px;
