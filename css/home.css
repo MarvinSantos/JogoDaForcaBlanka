@@ -1,0 +1,10 @@
+body {
+   position: relative;
+   width: 100%;
+}
+section {
+   left: 50%;
+   margin-left: -200px;
+   position: absolute;
+   width: 400px;
+}
