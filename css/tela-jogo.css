@@ -1,0 +1,10 @@
+body {
+   position: relative;
+   width: 100%;
+}
+.main {
+   left: 50%;
+   margin-left: -250px;
+   position: absolute;
+   width: 500px;
+}

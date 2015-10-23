@@ -3,28 +3,29 @@
   <head>
     <meta charset="utf-8">
     <title>Principal</title>
-
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <link rel="stylesheet" href="css/home.css" />
   </head>
   <body>
     <h2>Bem-vindo</h2>
+    <div class="centerBox">
+       <section>
+         <form id="formulario" action="home.html">
+           <p>
+             Digite seu nome de usuário:
+             <input id="nome" type="text" name="name">
+           </p>
 
-    <section>
-      <form id="formulario" action="home.html">
-        <p>
-          Digite seu nome de usuário:
-        </p>
-          <input id="nome" type="text" name="name">
-
-        <p>
-          Escolha o nível dificuldade:
-        </p>
-          <input id="normal" type="radio" name="normal" value="Normal"/> Normal <br/>
-          <input id="nunes" type="radio" name="nunes" value="Nunes"/> Nunes <br/>
-      </form>
-      <button id="submit">Entrar</button>
-    </section>
+           <p>
+             Escolha o nível dificuldade:
+             <input id="normal" type="radio" name="nivel" value="Normal"/> Normal
+             <input id="nunes" type="radio" name="nivel" value="Nunes"/> Nunes
+           </p>
+         </form>
+         <button id="submit">Entrar</button>
+       </section>
+    </div>
 
 
-  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
   </body>
 </html>
