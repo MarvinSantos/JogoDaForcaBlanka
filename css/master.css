@@ -3,7 +3,42 @@
    border-radius: 13px;
 }
 
-#button {
+body {
+   position: relative;
+   width: 100%;
+}
+
+.h1 {
+   font-family: Arial;
+   font-size: 50px;
+}
+
+.h2 {
+   font-family: Arial;
+   font-size: 25px;
+}
+
+.gameOver {
+   left: 50%;
+   margin-left: -200px;
+   margin-top: 5%;
+   position: absolute;
+   width: 400px;
+
+}
+
+.buttons{
+   position: absolute;
+   width: 300px;
+   left: 50%;
+   margin-left: -150px;
+}
+
+.centraliza {
+   text-align: center;
+}
+
+button {
    font-family: Arial;
    color: #ffffff;
    font-size: 20px;
@@ -22,12 +57,8 @@
    -moz-box-shadow: 1px 1px 3px #666666;
 }
 
-section {
-   with: 80%;
-   heith: 100%;
-   float
-}
 
+/*
 .container {
   max-width: 960px;
   padding: 0 15px;
@@ -156,9 +187,7 @@ section {
   margin-left: 100%;
 }
 
-/* =================================
-  Tablet
-================================= */
+
 
 @media (min-width: 480px) {
   .col-m-1 {
@@ -262,9 +291,7 @@ section {
   }
 }
 
-/* =================================
-  Desktop
-================================= */
+
 
 @media (min-width: 960px) {
   .col-l-1 {
@@ -367,3 +394,5 @@ section {
     margin-left: 100%;
   }
 }
+
+*/
