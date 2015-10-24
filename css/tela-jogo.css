@@ -1,7 +1,4 @@
-body {
-   position: relative;
-   width: 100%;
-}
+
 .main {
    left: 50%;
    margin-left: -250px;
@@ -38,12 +35,6 @@ body {
   padding: 4px;
   border-radius: 4px;
   margin-left: 25px;
-  border:3px solid #808080;
-}
-
-#input-letra{
-  padding: 4px;
-  border-radius: 4px;
   border:3px solid #808080;
 }
 

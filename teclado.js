@@ -28,15 +28,16 @@ function comparaSeTemALetraNaPalavra() {
   for (var i = 0; i < palavraSecreta.length; i++) {
     if(palavraSecreta.charAt(i).toLowerCase() === letra.toLowerCase()){
       colocarALetraNoTraco(letra,i);
+      console.log(letra + i);
     } else{
       countErros++;
     }
-  };
-}
+  }
+};
 
 function colocarALetraNoTraco(letra,index) {
   $("#resp p:nth-child("+(index+1)+")").html(letra.toUpperCase()).css("text-align","center").css("font-size","20pt");
-}
+};
 
 function palavraAleatoria(arrayPalavras){
   var indice = Math.floor(Math.random() * arrayPalavras.length);

@@ -9,9 +9,9 @@
     <header class="header">
     <h1 class="title">Jogo da Forca</h1>
   </header>
-  <section class="container">
+  <section>
 
-    <div class="col col-l-8 col-m-6 col-s-12 color">
+    <div class="col col-l-9 col-m-6 col-s-12 color heigth">
       <div id="resp"></div>
 
      <div id="div-teclado">
@@ -19,67 +19,67 @@
 
         <fieldset>
 
-          <input type="button" name="q" value="q" onclick="esconde(value)" />
+          <input type="button" name="q" value="Q" onclick="esconde(value)" />
 
-          <input type="button" name="w" value="w" onclick="esconde(value)" />
+          <input type="button" name="w" value="W" onclick="esconde(value)" />
 
-          <input type="button" name="e" value="e" onclick="esconde(value)" />
+          <input type="button" name="e" value="E" onclick="esconde(value)" />
 
-          <input type="button" name="r" value="r" onclick="esconde(value)" />
+          <input type="button" name="r" value="R" onclick="esconde(value)" />
 
-          <input type="button" name="t" value="t" onclick="esconde(value)" />
+          <input type="button" name="t" value="T" onclick="esconde(value)" />
 
-          <input type="button" name="y" value="y" onclick="esconde(value)" />
+          <input type="button" name="y" value="Y" onclick="esconde(value)" />
 
-          <input type="button" name="u" value="u" onclick="esconde(value)" />
+          <input type="button" name="u" value="U" onclick="esconde(value)" />
 
-          <input type="button" name="i" value="i" onclick="esconde(value)" />
+          <input type="button" name="i" value="I" onclick="esconde(value)" />
 
-          <input type="button" name="o" value="o" onclick="esconde(value)" />
+          <input type="button" name="o" value="O" onclick="esconde(value)" />
 
-          <input type="button" name="p" value="p" onclick="esconde(value)" />
+          <input type="button" name="p" value="P" onclick="esconde(value)" />
 
         </fieldset>
 
         <fieldset>
 
-          <input type="button" name="a" value="a" onclick="esconde(value)" />
+          <input type="button" name="a" value="A" onclick="esconde(value)" />
 
-          <input type="button" name="s" value="s" onclick="esconde(value)" />
+          <input type="button" name="s" value="S" onclick="esconde(value)" />
 
-          <input type="button" name="d" value="d" onclick="esconde(value)" />
+          <input type="button" name="d" value="D" onclick="esconde(value)" />
 
-          <input type="button" name="f" value="f" onclick="esconde(value)" />
+          <input type="button" name="f" value="F" onclick="esconde(value)" />
 
-          <input type="button" name="g" value="g" onclick="esconde(value)" />
+          <input type="button" name="g" value="G" onclick="esconde(value)" />
 
-          <input type="button" name="h" value="h" onclick="esconde(value)" />
+          <input type="button" name="h" value="H" onclick="esconde(value)" />
 
-          <input type="button" name="j" value="j" onclick="esconde(value)" />
+          <input type="button" name="j" value="J" onclick="esconde(value)" />
 
-          <input type="button" name="k" value="k" onclick="esconde(value)" />
+          <input type="button" name="k" value="K" onclick="esconde(value)" />
 
-          <input type="button" name="l" value="l" onclick="esconde(value)" />
+          <input type="button" name="l" value="L" onclick="esconde(value)" />
 
-          <input type="button" name="ç" value="ç" onclick="esconde(value)" />
+          <input type="button" name="ç" value="Ç" onclick="esconde(value)" />
 
         </fieldset>
 
         <fieldset>      
 
-          <input type="button" name="z" value="z" onclick="esconde(value)" />
+          <input type="button" name="z" value="Z" onclick="esconde(value)" />
 
-          <input type="button" name="x" value="x" onclick="esconde(value)" />
+          <input type="button" name="x" value="X" onclick="esconde(value)" />
 
-          <input type="button" name="c" value="c" onclick="esconde(value)" />
+          <input type="button" name="c" value="C" onclick="esconde(value)" />
 
-          <input type="button" name="v" value="v" onclick="esconde(value)" />     
+          <input type="button" name="v" value="V" onclick="esconde(value)" />     
 
-          <input type="button" name="b" value="b" onclick="esconde(value)" />
+          <input type="button" name="b" value="B" onclick="esconde(value)" />
 
-          <input type="button" name="n" value="n" onclick="esconde(value)" />
+          <input type="button" name="n" value="N" onclick="esconde(value)" />
 
-          <input type="button" name="m" value="m" onclick="esconde(value)" />
+          <input type="button" name="m" value="M" onclick="esconde(value)" />
 
         </fieldset>
 
@@ -87,13 +87,13 @@
      </div>
     </div>
 
-    <aside class="col col-l-4 col-m-6 col-s-12 color">
+    <aside class="col col-l-3 col-m-6 col-s-12 color aside heigth">
 
-      <input type="text" class="margemAjuste" id="input-palpite" placeholder="Palpitar palavra">
-      <button  class="button margemAjuste" id="button-palpite">Tentar</button><br>
+      <input type="text" class="block centraliza" id="input-palpite" placeholder="Palpitar palavra">
+      <button  class="button paraDireita block" id="button-palpite">Tentar</button>
 
-      <button class="block paraDireita button paraBaixo" id="button-reiniciar">REINICIAR</button>
-      <button class="button-top5 block paraDireita button paraBaixo margemDeBaixo">TOP 5</button>
+      <button class="block paraDireita button maisParaBaixo" id="button-reiniciar">REINICIAR</button>
+      <button class="button-top5 block button paraDireita paraBaixo margemDeBaixo">TOP 5</button>
     </aside>
   </section>
   <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>

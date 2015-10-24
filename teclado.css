@@ -1,13 +1,18 @@
 fieldset input { 
-	background: gray; 
-	border: 1px solid #000; 
+	border:1px solid #4B546A;
+   	box-shadow: #B7B8B8 0px 1px 0px inset;
+   	border-radius: 3px;
+   	font-size: 10pt;
+   	background-color: #808080;
 	padding: 4px;
 	width: 30px;
 	margin-right: 1px;
 }
 
 #teclado { 
-	width: 500px; 
+	width: 500px;
+	height: 300px;
+	margin-left: 270px; 
 	border: 0; 
 }
 
@@ -22,5 +27,49 @@ fieldset input {
 #resp{
 	width: 500px;
 	height: 100px;
+	margin-left: 300px;
 	margin-top: 70px;
+}
+.aside{
+	text-align: center;
+	padding: 30px;
+}
+
+.block{
+  display: block;
+}
+
+.paraDireita{
+  margin-left:40% ;
+}
+
+.paraBaixo{
+  margin-top: 30px;
+}
+.maisParaBaixo{
+	margin-top: 70px;
+}
+
+.margemDeBaixo{
+  margin-bottom: 100%;
+}
+
+.button{
+   border:1px solid #4B546A;
+   box-shadow: #B7B8B8 0px 1px 0px inset;
+   border-radius: 3px;
+   font-size: 10pt;
+   padding: 5px;
+   width: 80px;
+   background-color: #808080;
+}
+
+#input-palpite{
+  padding: 4px;
+  border-radius: 4px;
+  border:3px solid #808080;
+}
+
+.centraliza{
+	margin: 20px 50px 10px 60px;
 }
