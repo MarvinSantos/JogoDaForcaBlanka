@@ -2,25 +2,28 @@
 <html lang="pt-br">
   <head>
     <title>Jogo Da Forca</title>
-    <meta   charset="UTF-8" />
-
-    <link rel="stylesheet" type="text/css" href="css\gameOver.css" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="gameOver.css" />
+    <link rel="stylesheet" type="text/css" href="base/layout.css">
   </head>
 
   <body>
-     <div class="gameOver">
-       <section class="container">
-         <h1 class="centraliza h1">Game Over</h1>
-         <h2 class="centraliza h2">Pontuação</h2>
-         <div class="buttons">
-            <button id="btnReiniciar" type="button">Reiniciar</button>
-            <button id="btnSair" type="button" >Sair</button>
-            <button class="btnTopFive">Top 5</button>
-         </div>
-       </section>
+  <header class="header">
+    <p class="title">Jogo da Forca</p>
+  </header>
+  <section class="col col-l-12 col-m-12 col-s-12">
+    <div class="border color heigth">
+        <h1 class="centraliza h1">Game Over</h1>
+        <h2 class="centraliza h2">Pontuação:</h2>
+        <button class="button" id="btnReiniciar" type="button">Reiniciar</button>
+        <button class="button" id="btnSair" type="button" >Sair</button>
+        <button class="btnTopFive button">Top 5</button>
     </div>
-    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="funcoesDeBotoes.js"></script>
+
+  </section>
+
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
   </body>
 
 </html>

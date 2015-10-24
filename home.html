@@ -3,29 +3,37 @@
   <head>
     <meta charset="utf-8">
     <title>Principal</title>
-    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" type="text/css" href="base/layout.css">
+    <link rel="stylesheet" type="text/css" href="home.css">
   </head>
   <body>
-    <h2>Bem-vindo</h2>
-    <div class="centerBox">
-       <section>
-         <form id="formulario" action="home.html">
-           <p>
-             Digite seu nome de usuário:
-             <input id="nome" type="text" name="name">
-           </p>
+    <header class="header">
+      <h1 class="title">Jogo da Forca</h1>
+    </header>
+    <section class="col col-l-12 col-m-12 col-s-12">
 
-           <p>
-             Escolha o nível dificuldade:
-             <input id="normal" type="checkbox" name="nivel" value="Normal"/> Normal
-             <input id="nunes" type="checkbox" name="nivel" value="Nunes"/> Nunes
-           </p>
-         </form>
-         <button id="submit">Entrar</button>
-       </section>
-    </div>
+      <div class="border color">
 
+        <div class="center">
+          <form id="formulario">
+             <p>
+               Digite seu nome de usuário:
+               <input id="nome" type="text" name="name">
+             </p>
 
+             <p>
+               Escolha o nível dificuldade:
+               <input id="normal" type="checkbox" name="nivel" value="Normal"/> Normal
+               <input id="nunes" type="checkbox" name="nivel" value="Nunes"/> Nunes
+             </p>
+
+             <button id="submit">Entrar</button>
+           </form>
+         </div>
+
+      </div>
+
+  </section>
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
   </body>
 </html>
