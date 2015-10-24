@@ -29,3 +29,15 @@
 .heigth{
    height: 500px;
 }
+
+.lista{
+  margin-left: 39.3%;
+  height: auto;
+  width: 300px;
+  background-color: #fff;
+  border: 3px solid #9e9e9e;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #4B4B4B;
+  font-size: 16px;
+}
