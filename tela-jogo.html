@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/tela-jogo.css">
+    <link rel="stylesheet" href="teclado.css">
     <link rel="stylesheet" type="text/css" href="base/layout.css">
   </head>
   <body>
@@ -12,9 +12,79 @@
   <section class="container">
 
     <div class="col col-l-8 col-m-6 col-s-12 color">
-      <div class="forca"></div>
-      <input type="text" class="margemAjuste" id="input-letra" placeholder="Digite a letra">
-      <button class="margemAjuste button" id="button-letra">OK</button>
+      <p id="resp"></p>
+
+     <div id="div-teclado">
+      <fieldset id="teclado">
+
+        <fieldset>
+
+          <input type="button" name="q" value="q" onclick="esconde(value)" />
+
+          <input type="button" name="w" value="w" onclick="esconde(value)" />
+
+          <input type="button" name="e" value="e" onclick="esconde(value)" />
+
+          <input type="button" name="r" value="r" onclick="esconde(value)" />
+
+          <input type="button" name="t" value="t" onclick="esconde(value)" />
+
+          <input type="button" name="y" value="y" onclick="esconde(value)" />
+
+          <input type="button" name="u" value="u" onclick="esconde(value)" />
+
+          <input type="button" name="i" value="i" onclick="esconde(value)" />
+
+          <input type="button" name="o" value="o" onclick="esconde(value)" />
+
+          <input type="button" name="p" value="p" onclick="esconde(value)" />
+
+        </fieldset>
+
+        <fieldset>
+
+          <input type="button" name="a" value="a" onclick="esconde(value)" />
+
+          <input type="button" name="s" value="s" onclick="esconde(value)" />
+
+          <input type="button" name="d" value="d" onclick="esconde(value)" />
+
+          <input type="button" name="f" value="f" onclick="esconde(value)" />
+
+          <input type="button" name="g" value="g" onclick="esconde(value)" />
+
+          <input type="button" name="h" value="h" onclick="esconde(value)" />
+
+          <input type="button" name="j" value="j" onclick="esconde(value)" />
+
+          <input type="button" name="k" value="k" onclick="esconde(value)" />
+
+          <input type="button" name="l" value="l" onclick="esconde(value)" />
+
+          <input type="button" name="ç" value="ç" onclick="esconde(value)" />
+
+        </fieldset>
+
+        <fieldset>      
+
+          <input type="button" name="z" value="z" onclick="esconde(value)" />
+
+          <input type="button" name="x" value="x" onclick="esconde(value)" />
+
+          <input type="button" name="c" value="c" onclick="esconde(value)" />
+
+          <input type="button" name="v" value="v" onclick="esconde(value)" />     
+
+          <input type="button" name="b" value="b" onclick="esconde(value)" />
+
+          <input type="button" name="n" value="n" onclick="esconde(value)" />
+
+          <input type="button" name="m" value="m" onclick="esconde(value)" />
+
+        </fieldset>
+
+      </fieldset>
+     </div>
     </div>
 
     <aside class="col col-l-4 col-m-6 col-s-12 color">
@@ -27,5 +97,6 @@
     </aside>
   </section>
   <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="teclado.js"></script>
   </body>
 </html>
