@@ -1,12 +1,12 @@
 
-function sair(){
+function irParaHome(){
   $(function(){
       location.href = 'home.html';
   });
 };
 
 
-function reiniciar(){
+function irParaTelaJogo(){
   $(function(){
     location.href = 'tela-jogo.html';
   })
