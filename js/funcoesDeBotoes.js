@@ -1,6 +1,13 @@
 
 function sair(){
   $(function(){
-      location.href = 'file:///C:/Users/marvin.santos/Desktop/JogoDaForca/home.html';
+      location.href = 'home.html';
   });
+};
+
+
+function reiniciar(){
+  $(function(){
+    location.href = 'tela-jogo.html';
+  })
 };
