@@ -11,17 +11,19 @@
   </header>
   <section class="container">
 
-    <div class="col col-l-8 col-m-6 col-s-12 border color">
+    <div class="col col-l-8 col-m-6 col-s-12 color">
       <div class="forca"></div>
-      <input type="text" id="input-letra" placeholder="Digite a letra">
-      <button id="button-letra">OK</button>
+      <input type="text" class="margemAjuste" id="input-letra" placeholder="Digite a letra">
+      <button class="margemAjuste button" id="button-letra">OK</button>
     </div>
 
-    <aside class="col col-l-4 col-m-6 col-s-12 border color">
-      <input type="text" id="input-palpite" placeholder="Palpite">
-      <button id="button-palpite">Tentar</button><br>
-      <button id="button-reiniciar">REINICIAR</button>  
-      <button class="button-top5">TOP 5</button>   
+    <aside class="col col-l-4 col-m-6 col-s-12 color">
+
+      <input type="text" class="margemAjuste" id="input-palpite" placeholder="Palpitar palavra">
+      <button  class="button margemAjuste" id="button-palpite">Tentar</button><br>
+
+      <button class="block paraDireita button paraBaixo" id="button-reiniciar">REINICIAR</button>
+      <button class="button-top5 block paraDireita button paraBaixo margemDeBaixo">TOP 5</button>
     </aside>
   </section>
   <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
