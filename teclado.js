@@ -27,7 +27,6 @@ function comparaSeTemALetraNaPalavra() {
   var countErros=0;
   for (var i = 0; i < palavraSecreta.length; i++) {
     if(palavraSecreta.charAt(i).toLowerCase() === letra.toLowerCase()){
-      alert('Voce acertou');
       colocarALetraNoTraco(letra,i);
     } else{
       countErros++;
@@ -36,7 +35,7 @@ function comparaSeTemALetraNaPalavra() {
 }
 
 function colocarALetraNoTraco(letra,index) {
-  console.log($("#resp p:nth-child(2)"));
+  $("#resp p:nth-child("+(index+1)+")").html(letra.toUpperCase()).css("text-align","center").css("font-size","20pt");
 }
 
 function palavraAleatoria(arrayPalavras){
@@ -54,7 +53,7 @@ function criarTracos(palavra) {
         $("#resp").append('<p>***</p>').css("text-align","center");
       }
     }
-    $('p').css("display","inline").css("margin-right","10px");
+    $('p').css("display","inline").css("margin-top","50px").css("margin-right","10px");
     $('#resp').css("display","block");
 };
 

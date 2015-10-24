@@ -19,3 +19,8 @@ fieldset input {
 	border: 0; 
 	padding: 2px;
 }
+#resp{
+	width: 500px;
+	height: 100px;
+	margin-top: 70px;
+}
