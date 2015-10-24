@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="teclado.css">
     <link rel="stylesheet" type="text/css" href="base/layout.css">
+    <link rel="stylesheet" type="text/css" href="css\tela-jogo.css">
   </head>
   <body>
     <header class="header">
@@ -65,7 +66,7 @@
 
         </fieldset>
 
-        <fieldset>      
+        <fieldset>
 
           <input type="button" name="z" value="Z" onclick="esconde(value)" />
 
@@ -73,7 +74,7 @@
 
           <input type="button" name="c" value="C" onclick="esconde(value)" />
 
-          <input type="button" name="v" value="V" onclick="esconde(value)" />     
+          <input type="button" name="v" value="V" onclick="esconde(value)" />
 
           <input type="button" name="b" value="B" onclick="esconde(value)" />
 
@@ -89,14 +90,18 @@
 
     <aside class="col col-l-3 col-m-6 col-s-12 color aside heigth">
 
-      <input type="text" class="block centraliza" id="input-palpite" placeholder="Palpitar palavra">
+      <input type="text" class="block centralizarCaixaPalpite" id="input-palpite" placeholder="Palpitar palavra">
       <button  class="button paraDireita block" id="button-palpite">Tentar</button>
 
       <button class="block paraDireita button maisParaBaixo" id="button-reiniciar">REINICIAR</button>
-      <button class="button-top5 block button paraDireita paraBaixo margemDeBaixo">TOP 5</button>
+      <button class="btnTopFive block button paraDireita paraBaixo">TOP 5</button>
+      <div class="margemDeCima listaDoTop5">
+        <ol class="pessoa"></ol>
+      </div>
     </aside>
   </section>
   <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script type="text/javascript" src="teclado.js"></script>
+  <script type="text/javascript" src="js\top5.js"></script>
   </body>
 </html>
