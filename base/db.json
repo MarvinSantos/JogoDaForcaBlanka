@@ -1,34 +1,64 @@
 {
-    "palavras" : [
+  "palavras": [
     {
-      "palavra": "BERNARDES"
+      "palavra": "ANA"
     },
     {
-      "palavra": "AJAX"
+      "palavra": "HTML"
     },
     {
-      "palavra": "CWI"
+      "palavra": "CANOAS"
     },
     {
-      "palavra": "SERGIO"
+      "palavra": "COMPUTADOR"
     },
     {
-      "palavra": "PABLO"
+      "palavra": "PLAYSTATION"
     },
     {
-      "palavra": "FELIPE"
+      "palavra": "TELEVISÃO"
     },
     {
-      "palavra": "DANIELE"
+      "palavra": "BROWSER"
     },
     {
-      "palavra": "ERIC"
+      "palavra": "SOFÁ"
     },
     {
-      "palavra": "DIOGO"
-    }
+      "palavra": "MOCHILA"
+   },
+   {
+     "palavra": "SHIMBALAIÊ"
+   },
+   {
+     "palavra": "INCONSTITUCIONAL"
+   },
+   {
+     "palavra": "INCORRUPTÍVEL"
+   },
+   {
+     "palavra": "EXPERIMENTAÇÃO"
+   },
+   {
+     "palavra": "JAR JAR BINKS"
+   },
+   {
+     "palavra": "LATIFUNDIÁRIO"
+   },
+   {
+     "palavra": "REENCARNAÇÃO"
+   },
+   {
+     "palavra": "SENSACIONALISMO"
+   },
+   {
+     "palavra": "QUERO IBAGENS"
+   },
+   {
+     "palavra": "MOCHILA"
+   }
   ],
-  "pessoas" : [
+  "pessoas": [
     {
       "nome": "ASTROGILDO",
       "pontos": 0
