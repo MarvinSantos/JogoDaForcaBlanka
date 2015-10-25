@@ -16,8 +16,9 @@
 function iniciarJogo() {
   dificuldade;
   countErros=0;
+  pontuacao=0;
+  countLetrasTrocadas=0;
   limiteErros =(dificuldade === 'Nunes')? 2 : 5;
-  console.log(limiteErros);
   if(dificuldade === 'Nunes'){
     palavraAleatoria(palavrasnunes);
   } else {
@@ -51,8 +52,10 @@ function pegaLetraDoTeclado(value){
 function comparaSeTemALetraNaPalavra() {
   var contaLetras=0;
   for (var i = 0; i < palavraSecreta.length; i++) {
+    console.log(letra.toLowerCase());
     if(palavraSecreta.charAt(i).toLowerCase() === letra.toLowerCase()){
       colocarALetraNoTraco(letra,i);
+      dificuldade === 'Nunes' ? pontuacao+=3 : pontuacao+=2; 
       contaLetras++;
     }
   }
@@ -67,7 +70,15 @@ function erros(count){
 
 function colocarALetraNoTraco(letra,index) {
   $("#resp p:nth-child("+(index+1)+")").html(letra.toUpperCase()).css("text-align","center").css("font-size","20pt");
+  verificaSeGanhou();
 };
+
+function verificaSeGanhou(){
+  countLetrasTrocadas++;
+  if(countLetrasTrocadas === palavraSecreta.length){
+    alert('Voce acertou');
+  }
+}
 
 function palavraAleatoria(arrayPalavras){
   var indice = Math.floor(Math.random() * arrayPalavras.length);
@@ -91,12 +102,16 @@ function criarTracos(palavra) {
 function verificaSePalpiteEstaCerto() {
   var palpite = $("#input-palpite").val();
   if(palpite.toLowerCase() === palavraSecreta.toLowerCase()){
-    alert('Voce ganhou');
+    alert('Voce acertou');
+    dificuldade === 'Nunes' ? pontuacao+=15 : pontuacao+=10;
     location.href="tela-jogo.html";
   } else {
+
     location.href="gameOver.html";
   }
 };
+
+
 
 function mostraLetraErrada(letter){
   $('.letraErrada').append(
