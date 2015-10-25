@@ -23,7 +23,9 @@
 
     <div class="border color heigth">
         <h1 class="centraliza h1">Game Over</h1>
-        <h2 class="centraliza h2">Pontuação:</h2>
+        <div id="div-pontos">
+          <h2 class="centraliza h2 inline">Pontos:</h2><h2 id="h2Pontos" class="h2 inline">0</h2>
+        </div>
         <button class="button" id="btnReiniciar" type="button" onclick="irParaTelaJogo();">Reiniciar</button>
         <button class="button" id="btnSair" type="button" onclick="irParaHome();">Sair</button>
         <button class="btnTopFive button">Top 5</button>
@@ -35,6 +37,12 @@
   </section>
 
   <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script>
+    (function mostraPontuacao(){
+      var pontos = localStorage.getItem('pts');
+      $('#h2Pontos').html(pontos);
+    })();
+  </script>
   <script src="js\funcoesDeBotoes.js"></script>
   <script src="js\top5.js"></script>
 
