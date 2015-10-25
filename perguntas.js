@@ -10,8 +10,10 @@ function confereResposta(){
 		if(resposta[indice].toLowerCase() === respostaInserida.toLowerCase()){
 			pontuacao+=10;
 			alert('Resposta correta');
+			$('#enviar').css("display","none");
 		} else {
 			alert('Resposta errada');
+			$('#enviar').css("display","none");
 		}
 	}
 }
