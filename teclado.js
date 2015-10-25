@@ -65,7 +65,7 @@ function comparaSeTemALetraNaPalavra() {
 
 function erros(count){
   if(count === limiteErros){
-    window.location.replace("gameOver.html");
+    salvaPontos('gameOver.html');
   }
 }
 
@@ -77,7 +77,7 @@ function colocarALetraNoTraco(letra,index) {
 function verificaSeGanhou(){
   countLetrasTrocadas++;
   if(countLetrasTrocadas === countTracos){
-    salvaPontos();
+    salvaPontos("tela-jogo.html");
     alert('Voce acertou');
   }
 };
@@ -99,14 +99,15 @@ $.patch = function(url, data, callback, type){
   });
 };
 
-function salvaPontos(){
+function salvaPontos(pagina){
   idUsuario = '';
+  var paginaParaIr = pagina;
   $.get('http://localhost:3000/pessoas').done(function(data){
     idUsuario = data[data.length-1].id;
     $.get('http://localhost:3000/pessoas/'+idUsuario).done(function(data2){
       pontuacao += data2.pontos;
       $.patch('http://localhost:3000/pessoas/'+idUsuario,{pontos: pontuacao},function(){
-        window.location.replace("tela-jogo.html");
+        window.location.replace(paginaParaIr);
       })
     })
   });
@@ -138,11 +139,10 @@ function verificaSePalpiteEstaCerto() {
   if(palpite.toLowerCase() === palavraSecreta.toLowerCase()){
     alert('Voce acertou');
     dificuldade === 'Nunes' ? pontuacao+=15 : pontuacao+=10;
-    salvaPontos();
+    salvaPontos("tela-jogo.html");
 
   } else {
-
-    window.location.replace("gameOver.html");
+    salvaPontos("gameOver.html");
   }
 };
 
