@@ -1,13 +1,13 @@
 
 function irParaHome(){
   $(function(){
-      location.href = 'home.html';
+      location.replace('home.html');
   });
 };
 
 
 function irParaTelaJogo(){
   $(function(){
-    location.href = 'tela-jogo.html';
+    location.replace('tela-jogo.html');
   })
 };
