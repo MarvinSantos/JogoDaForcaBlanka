@@ -126,7 +126,11 @@ function palavraAleatoria(arrayPalavras){
   criarTracos(arrayPalavras[indice]);
   var palavraSorteada=arrayPalavras[indice];
   var palavrasLocalStorage = JSON.parse(localStorage["palavrasUsadas"]);
-  if($.inArray(palavraSorteada,palavrasLocalStorage) > -1){
+
+  if (arrayPalavras.length===palavrasLocalStorage.length-1) {
+    localStorage["palavrasUsadas"]="[]";
+  }
+  else if($.inArray(palavraSorteada,palavrasLocalStorage) !== -1){
      palavraAleatoria(arrayPalavras);
   }
   else {
