@@ -5,7 +5,7 @@
     var nunes = $("input[value='Nunes']:checked").val();
     var urlPessoas = 'http://localhost:3000/pessoas';
 
-    if(consultarPessoas(nome) > 0){
+    if(consultarPessoas(nome) === 0){
         if(normal === 'Normal'){
           console.log('aqui');
           $.post(urlPessoas, { nome: nome, pontos: 0, dificuldade: normal });
@@ -21,12 +21,10 @@
     var cont = 0;
     $.get('http://localhost:3000/pessoas').done(function(pessoas) {
       pessoas.forEach(function(elem){
-        if(nome !== elem.nome){
+        if(nome === elem.nome){
           cont++;
         }
       });
     })
       return cont;
   };
-
-
