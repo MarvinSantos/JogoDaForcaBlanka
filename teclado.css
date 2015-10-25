@@ -1,4 +1,4 @@
-fieldset input { 
+fieldset input {
 	border:1px solid #4B546A;
    	box-shadow: #B7B8B8 0px 1px 0px inset;
    	border-radius: 3px;
@@ -9,19 +9,19 @@ fieldset input {
 	margin-right: 1px;
 }
 
-#teclado { 
+#teclado {
 	width: 500px;
-	height: 300px;
-	margin-left: 270px; 
-	border: 0; 
+	height: 200px;
+	margin-left: 270px;
+	border: 0;
 }
 
-#teclado fieldset { 
-	width: 500px; 
-	text-align: center; 
-	float: left; 
+#teclado fieldset {
+	width: 500px;
+	text-align: center;
+	float: left;
 	margin: 2px;
-	border: 0; 
+	border: 0;
 	padding: 2px;
 }
 #resp{
