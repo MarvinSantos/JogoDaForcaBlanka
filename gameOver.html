@@ -15,7 +15,7 @@
   </header>
   <section class="col col-l-12 col-m-12 col-s-12">
 
-    <div id="posiciona"> 
+    <div id="posiciona" onclick="escondeDivSmile();"> 
       <div class="smile rotate-down-bounce">
         <div class="smile-mouth"></div>
       </div>
@@ -42,6 +42,10 @@
       var pontos = localStorage.getItem('pts');
       $('#h2Pontos').html(pontos);
     })();
+
+    function escondeDivSmile() {
+      $('#posiciona').css("display","none");
+    }
   </script>
   <script src="js\funcoesDeBotoes.js"></script>
   <script src="js\top5.js"></script>
