@@ -40,16 +40,18 @@ function esconde (value) {
 
 function pegaLetraDoTeclado(value){
   letra = $("input[value='"+value+"']").val();
-  comparaSeTemALetraNaPalavra();
+  var temLetra=comparaSeTemALetraNaPalavra();
+  if(temLetra !== true){
+    countErros++;
+    erros(countErros);
+  }
 };
 
 function comparaSeTemALetraNaPalavra() {
   for (var i = 0; i < palavraSecreta.length; i++) {
     if(palavraSecreta.charAt(i).toLowerCase() === letra.toLowerCase()){
       colocarALetraNoTraco(letra,i);
-    } else{
-      countErros++;
-      erros(countErros);
+      return true;
     }
   }
 };
