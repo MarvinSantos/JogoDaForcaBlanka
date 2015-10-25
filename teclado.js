@@ -41,19 +41,21 @@ function esconde (value) {
 function pegaLetraDoTeclado(value){
   letra = $("input[value='"+value+"']").val();
   var temLetra=comparaSeTemALetraNaPalavra();
-  if(temLetra !== true){
+  if(temLetra === 0){
     countErros++;
     erros(countErros);
   }
 };
 
 function comparaSeTemALetraNaPalavra() {
+  var contaLetras=0;
   for (var i = 0; i < palavraSecreta.length; i++) {
     if(palavraSecreta.charAt(i).toLowerCase() === letra.toLowerCase()){
       colocarALetraNoTraco(letra,i);
-      return true;
+      contaLetras++;
     }
   }
+  return contaLetras;
 };
 
 function erros(count){
