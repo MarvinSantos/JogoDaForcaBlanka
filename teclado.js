@@ -17,6 +17,7 @@ function iniciarJogo() {
   dificuldade;
   countErros=0;
   pontuacao=0;
+  countTracos=0;
   countLetrasTrocadas=0;
   limiteErros =(dificuldade === 'Nunes')? 2 : 5;
   if(dificuldade === 'Nunes'){
@@ -75,7 +76,7 @@ function colocarALetraNoTraco(letra,index) {
 
 function verificaSeGanhou(){
   countLetrasTrocadas++;
-  if(countLetrasTrocadas === palavraSecreta.length){
+  if(countLetrasTrocadas === countTracos){
     salvaPontos();
     alert('Voce acertou');
   }
@@ -123,6 +124,7 @@ function criarTracos(palavra) {
     for (var i = 0; i < tam; i++) {
       if(palavra[i] !== ' '){
         $("#resp").append('<p>____</p>').css("text-align","center");
+        countTracos++;
       } else{
         $("#resp").append('<p>***</p>').css("text-align","center");
       }

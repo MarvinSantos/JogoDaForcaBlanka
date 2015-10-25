@@ -70,6 +70,36 @@
     {
       "nome": "JUCA",
       "pontos": 0
+    },
+    {
+      "nome": "bruno verch",
+      "pontos": 78,
+      "dificuldade": "Normal",
+      "id": "1b465992-c066-406d-8c4c-a30022451df6"
+    },
+    {
+      "nome": "bruno",
+      "pontos": 130,
+      "dificuldade": "Normal",
+      "id": "fca5a2ae-5bfb-4199-b4a5-d936dede6c11"
+    }
+  ],
+  "perguntas": [
+    {
+      "pergunta": "Qual é o fim da picada?",
+      "resposta": "Quando o mosquito vai embora"
+    },
+    {
+      "pergunta": "O que o canibal vegetariano come?",
+      "resposta": "A planta do pé e a batata da perna"
+    },
+    {
+      "pergunta": "O que o advogado do frango foi fazer na delegacia?",
+      "resposta": "Foi soltar a franga"
+    },
+    {
+      "pergunta": "O que se utiliza para fazer omelete de chocolate?",
+      "resposta": "Ovos de páscoa"
     }
   ]
 }
