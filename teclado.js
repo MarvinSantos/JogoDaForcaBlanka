@@ -55,7 +55,7 @@ function comparaSeTemALetraNaPalavra() {
     console.log(letra.toLowerCase());
     if(palavraSecreta.charAt(i).toLowerCase() === letra.toLowerCase()){
       colocarALetraNoTraco(letra,i);
-      dificuldade === 'Nunes' ? pontuacao+=3 : pontuacao+=2; 
+      dificuldade === 'Nunes' ? pontuacao+=3 : pontuacao+=2;
       contaLetras++;
     }
   }
@@ -76,9 +76,41 @@ function colocarALetraNoTraco(letra,index) {
 function verificaSeGanhou(){
   countLetrasTrocadas++;
   if(countLetrasTrocadas === palavraSecreta.length){
+    salvaPontos();
     alert('Voce acertou');
   }
-}
+};
+
+$.patch = function(url, data, callback, type){
+
+  if ( $.isFunction(data) ){
+    type = type || callback,
+    callback = data,
+    data = {}
+  }
+
+  return $.ajax({
+    url: url,
+    type: 'PATCH',
+    success: callback,
+    data: data,
+    contentType: type
+  });
+};
+
+function salvaPontos(){
+  idUsuario = '';
+  $.get('http://localhost:3000/pessoas').done(function(data){
+    idUsuario = data[data.length-1].id;
+    $.get('http://localhost:3000/pessoas/'+idUsuario).done(function(data2){
+      pontuacao += data2.pontos;
+      $.patch('http://localhost:3000/pessoas/'+idUsuario,{pontos: pontuacao},function(){
+        console.log('funcionou');
+      })
+    })
+  });
+};
+
 
 function palavraAleatoria(arrayPalavras){
   var indice = Math.floor(Math.random() * arrayPalavras.length);
@@ -104,7 +136,10 @@ function verificaSePalpiteEstaCerto() {
   if(palpite.toLowerCase() === palavraSecreta.toLowerCase()){
     alert('Voce acertou');
     dificuldade === 'Nunes' ? pontuacao+=15 : pontuacao+=10;
-    window.location.replace("tela-jogo.html");
+    salvaPontos().done(function(){
+      window.location.replace("tela-jogo.html");
+    });
+
   } else {
 
     window.location.replace("gameOver.html");
