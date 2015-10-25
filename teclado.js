@@ -64,7 +64,7 @@ function comparaSeTemALetraNaPalavra() {
 
 function erros(count){
   if(count === limiteErros){
-    location.replace("gameOver.html");
+    window.location.replace("gameOver.html");
   }
 }
 
@@ -104,10 +104,10 @@ function verificaSePalpiteEstaCerto() {
   if(palpite.toLowerCase() === palavraSecreta.toLowerCase()){
     alert('Voce acertou');
     dificuldade === 'Nunes' ? pontuacao+=15 : pontuacao+=10;
-    location.replace("tela-jogo.html");
+    window.location.replace("tela-jogo.html");
   } else {
 
-    location.replace("gameOver.html");
+    window.location.replace("gameOver.html");
   }
 };
 

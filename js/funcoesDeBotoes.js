@@ -1,13 +1,13 @@
 
 function irParaHome(){
   $(function(){
-      location.replace('home.html');
+      window.location.replace('home.html');
   });
 };
 
 
 function irParaTelaJogo(){
   $(function(){
-    location.replace('tela-jogo.html');
+    window.location.replace('tela-jogo.html');
   })
 };
