@@ -2,6 +2,14 @@
 .centraliza{
    text-align: center;
    font-family: Arial;
+
+}
+
+#div-pontos{
+  width: 200px;
+  left: -100px;
+  margin-left: 50%;
+  position: relative;
 }
 
 .h1{
@@ -30,6 +38,10 @@
 
 .heigth{
    height: 500px;
+}
+
+.inline{
+  display: inline-block;
 }
 
 .lista{

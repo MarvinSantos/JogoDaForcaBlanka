@@ -69,3 +69,19 @@
   margin-bottom: 15px;
   margin-left: 15px;
 }
+
+.tamanho-letra{
+  font-size: 14pt;
+}
+
+.centraliza-resposta{
+  margin-left: 150px;
+}
+
+#pergunta{
+  height: 80px;
+}
+
+#div-teclado{
+  height: 150px;
+}

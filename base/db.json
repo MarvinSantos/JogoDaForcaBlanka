@@ -60,16 +60,28 @@
   ],
   "pessoas": [
     {
-      "nome": "ASTROGILDO",
-      "pontos": 0
+      "nome": "God",
+      "pontos": 140,
+      "dificuldade": "Normal",
+      "id": "10841575-8a5d-4c3d-9948-fe0e05d720f6"
+    }
+  ],
+  "perguntas": [
+    {
+      "pergunta": "Qual é o fim da picada?",
+      "resposta": "Quando o mosquito vai embora"
     },
     {
-      "nome": "JOAO",
-      "pontos": 0
+      "pergunta": "O que o canibal vegetariano come?",
+      "resposta": "A planta do pé e a batata da perna"
     },
     {
-      "nome": "JUCA",
-      "pontos": 0
+      "pergunta": "O que o advogado do frango foi fazer na delegacia?",
+      "resposta": "Foi soltar a franga"
+    },
+    {
+      "pergunta": "O que se utiliza para fazer omelete de chocolate?",
+      "resposta": "Ovos de páscoa"
     }
   ]
 }
