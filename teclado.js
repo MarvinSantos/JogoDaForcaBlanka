@@ -58,9 +58,11 @@ function criarTracos(palavra) {
     $('#resp').css("display","block");
 };
 
-function verificaSePalpiteEstaCerto(palpite) {
+function verificaSePalpiteEstaCerto() {
+  var palpite = $("#input-palpite").val();
   if(palpite.toLowerCase() === palavraSecreta.toLowerCase()){
     alert('Voce ganhou');
+    location.href="tela-jogo.html";
   } else {
     location.href="gameOver.html";
   }

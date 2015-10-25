@@ -13,7 +13,10 @@
           $.post(urlPessoas, { nome: nome, pontos: 0, dificuldade: nunes });
         }
     }
-    irParaTelaJogo();
+    var timeoutID = window.setTimeout(function () {
+      irParaTelaJogo();
+    }, 2000);
+
 
   };
 
