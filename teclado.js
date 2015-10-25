@@ -1,5 +1,10 @@
+palavrasUsadas=[];
+if(palavrasUsadas==='[]'){
+   localStorage['palavrasUsadas'] = JSON.stringify(palavrasUsadas);
+}
 
-(function pegaPalavras(){
+(
+function pegaPalavras(){
   palavrasnormais=[]; // porque não é var?
   palavrasnunes=[];   // porque não é var?
   var promise = $.getJSON("http://localhost:3000/palavras");
@@ -83,6 +88,14 @@ function verificaSeGanhou(){
 function palavraAleatoria(arrayPalavras){
   var indice = Math.floor(Math.random() * arrayPalavras.length);
   criarTracos(arrayPalavras[indice]);
+  var palavraSorteada=arrayPalavras[indice];
+  var palavrasLocalStorage = JSON.parse(localStorage["palavrasUsadas"]);
+  if($.inArray(palavraSorteada,palavrasLocalStorage) > -1){
+     palavraAleatoria(arrayPalavras);
+  }
+  else {
+     insereLocalStorage();
+  }
 };
 
 function criarTracos(palavra) {
@@ -97,6 +110,13 @@ function criarTracos(palavra) {
     }
     $('p').css("display","inline").css("margin-top","50px").css("margin-right","10px");
     $('#resp').css("display","block");
+};
+
+function insereLocalStorage() {
+   palavrasUsadas = JSON.parse(localStorage["palavrasUsadas"]);
+   palavrasUsadas.push(palavraSecreta);
+   localStorage['palavrasUsadas'] = JSON.stringify(palavrasUsadas);
+
 };
 
 function verificaSePalpiteEstaCerto() {
