@@ -8,14 +8,15 @@
     if(consultarPessoas(nome) === 0){
         if(normal === 'Normal'){
           console.log('aqui');
-          $.post(urlPessoas, { nome: nome, pontos: 0, dificuldade: normal });
+          $.post(urlPessoas, { nome: nome, pontos: 0, dificuldade: normal }).done(function(){
+            irParaTelaJogo();
+          });
         }else if(nunes === 'Nunes'){
-          $.post(urlPessoas, { nome: nome, pontos: 0, dificuldade: nunes });
+          $.post(urlPessoas, { nome: nome, pontos: 0, dificuldade: nunes }).done(function(){
+            irParaTelaJogo();
+          });
         }
     }
-    var timeoutID = window.setTimeout(function () {
-      irParaTelaJogo();
-    }, 2000);
 
 
   };
