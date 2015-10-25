@@ -13,6 +13,26 @@
   });
 })();
 
+function iniciarJogo() {
+  dificuldade;
+  countErros=0;
+  limiteErros =(dificuldade === 'Nunes')? 2 : 5;
+  console.log(limiteErros);
+  if(dificuldade === 'Nunes'){
+    palavraAleatoria(palavrasnunes);
+  } else {
+    palavraAleatoria(palavrasnormais);
+  }
+};
+
+(function pegaArrayConformeDificuldade(){
+  $.get("http://localhost:3000/pessoas").done(function (elem) {
+    dificuldade = elem[elem.length-1].dificuldade;
+    console.log(dificuldade);
+    iniciarJogo();
+  });
+})();
+
 function esconde (value) {
   $("input[value='"+value+"']").css("display","none");
   pegaLetraDoTeclado(value);
@@ -24,16 +44,21 @@ function pegaLetraDoTeclado(value){
 };
 
 function comparaSeTemALetraNaPalavra() {
-  var countErros=0;
   for (var i = 0; i < palavraSecreta.length; i++) {
     if(palavraSecreta.charAt(i).toLowerCase() === letra.toLowerCase()){
       colocarALetraNoTraco(letra,i);
-      console.log(letra + i);
     } else{
       countErros++;
+      erros(countErros);
     }
   }
 };
+
+function erros(count){
+  if(count === limiteErros){
+    location.href="gameOver.html";
+  }
+}
 
 function colocarALetraNoTraco(letra,index) {
   $("#resp p:nth-child("+(index+1)+")").html(letra.toUpperCase()).css("text-align","center").css("font-size","20pt");
