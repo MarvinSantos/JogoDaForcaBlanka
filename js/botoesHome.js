@@ -1,29 +1,25 @@
-$(function() {
 
-  $('#submit').click(function() {
+  function gravarBanco() {
     var nome = $('input:text').val();
     var normal = $("input[value='Normal']:checked").val();
     var nunes = $("input[value='Nunes']:checked").val();
     var urlPessoas = 'http://localhost:3000/pessoas';
 
     if(consultarPessoas(nome) > 0){
-        if(normal.valueOf() === 'Normal'){
+        if(normal === 'Normal'){
+          console.log('aqui');
           $.post(urlPessoas, { nome: nome, pontos: 0, dificuldade: normal });
-        }else if(nunes.valueOf() === 'Nunes'){
+        }else if(nunes === 'Nunes'){
           $.post(urlPessoas, { nome: nome, pontos: 0, dificuldade: nunes });
         }
     }
+    irParaTelaJogo();
 
-    $(function(){
-      location.href = 'file:///C:/Users/vicente/Documents/JogoDaForcaBlanka/tela-jogo.html';
-      console.log('redirecionando...');
-    })
-
-  });
+  };
 
   function consultarPessoas(nome) {
     var cont = 0;
-    $.get(urlPessoas).done(function(pessoas) {
+    $.get('http://localhost:3000/pessoas').done(function(pessoas) {
       pessoas.forEach(function(elem){
         if(nome !== elem.nome){
           cont++;
@@ -31,6 +27,6 @@ $(function() {
       });
     })
       return cont;
-  }
+  };
 
-})
+
