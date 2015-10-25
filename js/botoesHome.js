@@ -4,7 +4,7 @@
     var normal = $("input[value='Normal']:checked").val();
     var nunes = $("input[value='Nunes']:checked").val();
     var urlPessoas = 'http://localhost:3000/pessoas';
-
+  
     if(consultarPessoas(nome) === 0){
         if(normal === 'Normal'){
           console.log('aqui');
@@ -17,8 +17,6 @@
           });
         }
     }
-
-
   };
 
   function consultarPessoas(nome) {

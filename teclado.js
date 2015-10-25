@@ -1,7 +1,7 @@
 
 (function pegaPalavras(){
-  palavrasnormais=[];
-  palavrasnunes=[];
+  palavrasnormais=[]; // porque não é var?
+  palavrasnunes=[];   // porque não é var?
   var promise = $.getJSON("http://localhost:3000/palavras");
   promise.done(function (elem) {
       elem.forEach(function (elem2) {
@@ -27,7 +27,7 @@ function iniciarJogo() {
 
 (function pegaArrayConformeDificuldade(){
   $.get("http://localhost:3000/pessoas").done(function (elem) {
-    dificuldade = elem[elem.length-1].dificuldade;
+    dificuldade = elem[elem.length-1].dificuldade; // porque length-1?
     console.log(dificuldade);
     iniciarJogo();
   });
