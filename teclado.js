@@ -1,5 +1,6 @@
 
 (function pegaPalavras(){
+  pontuacao = 0;
   palavrasnormais=[]; // porque não é var?
   palavrasnunes=[];   // porque não é var?
   var promise = $.getJSON("http://localhost:3000/palavras");
@@ -28,6 +29,7 @@ function iniciarJogo() {
 };
 
 (function pegaArrayConformeDificuldade(){
+  pontuacao = 0;
   $.get("http://localhost:3000/pessoas").done(function (elem) {
     dificuldade = elem[elem.length-1].dificuldade; // porque length-1?
     console.log(dificuldade);
@@ -65,6 +67,7 @@ function comparaSeTemALetraNaPalavra() {
 
 function erros(count){
   if(count === limiteErros){
+    localStorage.setItem('pts',pontuacao);
     salvaPontos('gameOver.html');
   }
 }
@@ -142,6 +145,7 @@ function verificaSePalpiteEstaCerto() {
     salvaPontos("tela-jogo.html");
 
   } else {
+    localStorage.setItem('pts',pontuacao);
     salvaPontos("gameOver.html");
   }
 };
