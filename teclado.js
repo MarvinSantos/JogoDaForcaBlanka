@@ -8,7 +8,7 @@
         palavrasnormais.push(elem2.palavra);
         if(elem2.palavra.length > 12){
           palavrasnunes.push(elem2.palavra);
-        }       
+        }
       })
   });
 })();
@@ -44,6 +44,7 @@ function pegaLetraDoTeclado(value){
   if(temLetra === 0){
     countErros++;
     erros(countErros);
+    mostraLetraErrada(letra);
   }
 };
 
@@ -95,5 +96,10 @@ function verificaSePalpiteEstaCerto() {
   } else {
     location.href="gameOver.html";
   }
-}
+};
 
+function mostraLetraErrada(letter){
+  $('.letraErrada').append(
+    $('<li>').html('-  '+letter +'  -').addClass('inline')
+  )
+};
