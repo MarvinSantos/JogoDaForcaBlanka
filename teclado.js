@@ -71,7 +71,9 @@ function comparaSeTemALetraNaPalavra() {
 
 function erros(count){
   if(count === limiteErros){
-    localStorage.setItem('pts',pontuacao);
+    currentPoints += pontuacao;
+    localStorage.setItem('pts',currentPoints);
+    currentPoints = 0;
     salvaPontos('gameOver.html');
   }
 }
@@ -84,6 +86,7 @@ function colocarALetraNoTraco(letra,index) {
 function verificaSeGanhou(){
   countLetrasTrocadas++;
   if(countLetrasTrocadas === countTracos){
+    currentPoints += pontuacao;
     salvaPontos("tela-jogo.html");
     alert('Voce acertou');
   }
@@ -158,10 +161,14 @@ function verificaSePalpiteEstaCerto() {
   if(palpite.toLowerCase() === palavraSecreta.toLowerCase()){
     alert('Voce acertou');
     dificuldade === 'Nunes' ? pontuacao+=15 : pontuacao+=10;
+
+    currentPoints += pontuacao;
     salvaPontos("tela-jogo.html");
 
   } else {
-    localStorage.setItem('pts',pontuacao);
+    currentPoints += pontuacao;
+    localStorage.setItem('pts',currentPoints);
+    currentPoints = 0;
     salvaPontos("gameOver.html");
   }
 };
@@ -177,4 +184,30 @@ function mostraLetraErrada(letter){
   $('.letraErrada').append(
     $('<li>').html('-  '+letter +'  -').addClass('inline')
   )
+};
+
+function gravarBanco() {
+  currentPoints = 0;
+  var nome = $('input:text').val();
+  if(nome !== ''){
+    var normal = $("input[value='Normal']:checked").val();
+    var nunes = $("input[value='Nunes']:checked").val();
+    var urlPessoas = 'http://localhost:3000/pessoas';
+
+    localStorage["pessoas"] = JSON.stringify({
+      "nome": nome,
+      "pontos": 0
+    });
+
+
+    if(normal === 'Normal'){
+      $.post(urlPessoas, { nome: nome, pontos: 0, dificuldade: normal }).done(function(){
+        irParaTelaJogo();
+      });
+    }else if(nunes === 'Nunes'){
+      $.post(urlPessoas, { nome: nome, pontos: 0, dificuldade: nunes }).done(function(){
+        irParaTelaJogo();
+      });
+    }
+  }
 };
