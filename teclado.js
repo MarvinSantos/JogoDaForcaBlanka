@@ -106,7 +106,7 @@ function salvaPontos(){
     $.get('http://localhost:3000/pessoas/'+idUsuario).done(function(data2){
       pontuacao += data2.pontos;
       $.patch('http://localhost:3000/pessoas/'+idUsuario,{pontos: pontuacao},function(){
-        console.log('funcionou');
+        window.location.replace("tela-jogo.html");
       })
     })
   });
@@ -138,9 +138,7 @@ function verificaSePalpiteEstaCerto() {
   if(palpite.toLowerCase() === palavraSecreta.toLowerCase()){
     alert('Voce acertou');
     dificuldade === 'Nunes' ? pontuacao+=15 : pontuacao+=10;
-    salvaPontos().done(function(){
-      window.location.replace("tela-jogo.html");
-    });
+    salvaPontos();
 
   } else {
 
