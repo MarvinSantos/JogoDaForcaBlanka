@@ -69,7 +69,6 @@ function comparaSeTemALetraNaPalavra() {
 
 function erros(count){
   if(count === limiteErros){
-    localStorage.setItem('pts',pontuacao);
     salvaPontos('gameOver.html');
   }
 }
@@ -159,7 +158,6 @@ function verificaSePalpiteEstaCerto() {
     salvaPontos("tela-jogo.html");
 
   } else {
-    localStorage.setItem('pts',pontuacao);
     salvaPontos("gameOver.html");
   }
 };
@@ -175,30 +173,4 @@ function mostraLetraErrada(letter){
   $('.letraErrada').append(
     $('<li>').html('-  '+letter +'  -').addClass('inline')
   )
-};
-
-function gravarBanco() {
-  currentPoints = 0;
-  var nome = $('input:text').val();
-  if(nome !== ''){
-    var normal = $("input[value='Normal']:checked").val();
-    var nunes = $("input[value='Nunes']:checked").val();
-    var urlPessoas = 'http://localhost:3000/pessoas';
-
-    localStorage["pessoas"] = JSON.stringify({
-      "nome": nome,
-      "pontos": 0
-    });
-
-
-    if(normal === 'Normal'){
-      $.post(urlPessoas, { nome: nome, pontos: 0, dificuldade: normal }).done(function(){
-        irParaTelaJogo();
-      });
-    }else if(nunes === 'Nunes'){
-      $.post(urlPessoas, { nome: nome, pontos: 0, dificuldade: nunes }).done(function(){
-        irParaTelaJogo();
-      });
-    }
-  }
 };
