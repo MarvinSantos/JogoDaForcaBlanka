@@ -35,8 +35,7 @@ function iniciarJogo() {
 (function pegaArrayConformeDificuldade(){
   pontuacao = 0;
   $.get("http://localhost:3000/pessoas").done(function (elem) {
-    dificuldade = elem[elem.length-1].dificuldade; // porque length-1?
-    console.log(dificuldade);
+    dificuldade = elem[elem.length-1].dificuldade;
     iniciarJogo();
   });
 })();
@@ -59,7 +58,6 @@ function pegaLetraDoTeclado(value){
 function comparaSeTemALetraNaPalavra() {
   var contaLetras=0;
   for (var i = 0; i < palavraSecreta.length; i++) {
-    console.log(letra.toLowerCase());
     if(palavraSecreta.charAt(i).toLowerCase() === letra.toLowerCase()){
       colocarALetraNoTraco(letra,i);
       dificuldade === 'Nunes' ? pontuacao+=3 : pontuacao+=2;
@@ -71,9 +69,7 @@ function comparaSeTemALetraNaPalavra() {
 
 function erros(count){
   if(count === limiteErros){
-    currentPoints += pontuacao;
     localStorage.setItem('pts',currentPoints);
-    currentPoints = 0;
     salvaPontos('gameOver.html');
   }
 }
@@ -86,7 +82,6 @@ function colocarALetraNoTraco(letra,index) {
 function verificaSeGanhou(){
   countLetrasTrocadas++;
   if(countLetrasTrocadas === countTracos){
-    currentPoints += pontuacao;
     salvaPontos("tela-jogo.html");
     alert('Voce acertou');
   }
@@ -161,14 +156,10 @@ function verificaSePalpiteEstaCerto() {
   if(palpite.toLowerCase() === palavraSecreta.toLowerCase()){
     alert('Voce acertou');
     dificuldade === 'Nunes' ? pontuacao+=15 : pontuacao+=10;
-
-    currentPoints += pontuacao;
     salvaPontos("tela-jogo.html");
 
   } else {
-    currentPoints += pontuacao;
     localStorage.setItem('pts',currentPoints);
-    currentPoints = 0;
     salvaPontos("gameOver.html");
   }
 };
