@@ -11,3 +11,9 @@ function irParaTelaJogo(){
     window.location.replace('tela-jogo.html');
   })
 };
+
+function irParaManual(){
+  $(function(){
+    window.location.replace('manual.html');
+  })
+}

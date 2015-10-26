@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Jogo da Forca</title>
+	<link rel="stylesheet" type="text/css" href="base/layout.css">
+	<link rel="stylesheet" type="text/css" href="css/manual.css">
+</head>
+<body>
+	<header class="header">
+		<p class="title">Jogo da Forca</p>
+	</header>
+
+	<section class="col col-l-12 col-m-12 col-s-12 border color">
+		<h2 class="center">Instruções</h2>
+		<p class="center">1-Insira o seu nome e escolha a dificuldade;</p>
+		<p class="center">-Na dificuldade normal, o limite máximo de letras erradas é 5;</p>
+		<p class="center">-Na dificuldade nunes, o limite máximo de letras erradas é 2 e são escolhidas apenas palavras com mais de 12 caracteres.</p>
+		<p class="center">2-Para cada tentativa é preciso clicar na letra desejada do teclado virtual</p>
+		<p class="center">-Em caso de acerto a letra será exibida no lugar do traço;</p>
+		<p class="center">-Em caso de erro a letra será exibida em vermelho, abaixo do teclado virtual;</p>
+		<p class="center">3-Na tela de jogo há uma pergunta aleatória abaixo do teclado, que poderá ser respondida uma única vez (na rodada)</p>
+		<p class="center">-Em caso de acerto sua pontuação será incrementada com 10 pontos;</p>
+		<p class="center">-Em caso de erro o jogo continua sem alteração;</p>
+		<p class="center">4-Você também poderá palpitar a palavra escrevendo no campo de texto a direita e clicando no botão ‘Tentar’;</p>
+		<p class="center">-Em caso de erro o jogo termina;</p>
+		<p class="center">5-Há também o botão Reiniciar que zera a sua pontuação e inicia uma nova rodada;</p>
+		<p class="center">Pontuação:</p>
+		<p class="center">-Dificuldade Normal: 2 pontos por letra acertada, 10 pontos por palpite certo;</p>
+		<p class="center">-Dificuldade Nunes: 3 pontos por letra acertada, 15 pontos por palpite certo;</p>
+	</section>
+	<div class="center">
+		<button id="voltar" type="button" onclick="irParaHome();">Voltar ao Jogo</button>
+	</div>
+
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="js/funcoesDeBotoes.js"></script>
+</body>
+</html>
