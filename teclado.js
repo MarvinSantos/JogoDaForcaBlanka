@@ -69,7 +69,7 @@ function comparaSeTemALetraNaPalavra() {
 
 function erros(count){
   if(count === limiteErros){
-    localStorage.setItem('pts',currentPoints);
+    localStorage.setItem('pts',pontuacao);
     salvaPontos('gameOver.html');
   }
 }
@@ -159,7 +159,7 @@ function verificaSePalpiteEstaCerto() {
     salvaPontos("tela-jogo.html");
 
   } else {
-    localStorage.setItem('pts',currentPoints);
+    localStorage.setItem('pts',pontuacao);
     salvaPontos("gameOver.html");
   }
 };
