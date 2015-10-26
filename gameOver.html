@@ -40,9 +40,9 @@
   <script>
     (function mostraPontuacao(){
         $.get('http://localhost:3000/pessoas').done(function (elem) {
-        var points = 0;
-        points = elem[elem.length - 1].pontos;
-        $('#h2Pontos').html(points);
+          var points = 0;
+          points = elem[elem.length - 1].pontos;
+          $('#h2Pontos').html(points);
       });
     })();
     function escondeDivSmile() {

@@ -5,8 +5,8 @@ if(palavrasUsadas==='[]'){
 
 (function pegaPalavras(){
   pontuacao = 0;
-  palavrasnormais=[]; // porque não é var?
-  palavrasnunes=[];   // porque não é var?
+  palavrasnormais=[]; 
+  palavrasnunes=[];
   var promise = $.getJSON("http://localhost:3000/palavras");
   promise.done(function (elem) {
       elem.forEach(function (elem2) {
