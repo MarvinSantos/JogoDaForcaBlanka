@@ -165,6 +165,34 @@ function verificaSePalpiteEstaCerto() {
   }
 };
 
+
+   window.onload = function() {
+      startCountDown(60, 1000, myFunction);
+      }
+      function startCountDown(i, p, f) {
+      var pause = p;
+      var fn = f;
+      var countDownObj = document.getElementById("countDown");
+      countDownObj.count = function(i) {
+         countDownObj.innerHTML = i;
+         if (i === 0) {
+         alert('SEU TEMPO ACABOU!')
+         localStorage.setItem('pts',pontuacao);
+         salvaPontos("gameOver.html");
+         fn();
+         return;
+      }
+      setTimeout(function() {
+         countDownObj.count(i - 1);
+         },
+         pause
+         );
+      }
+      countDownObj.count(i);
+      }
+      function myFunction(){};
+
+
 function insereLocalStorage() {
    palavrasUsadas = JSON.parse(localStorage["palavrasUsadas"]);
    palavrasUsadas.push(palavraSecreta);
