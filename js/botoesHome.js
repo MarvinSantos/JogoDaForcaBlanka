@@ -1,6 +1,5 @@
-/*
+
 function gravarBanco() {
-  currentPoints = 0;
   var nome = $('input:text').val();
   if(nome !== ''){
     var normal = $("input[value='Normal']:checked").val();
@@ -23,4 +22,4 @@ function gravarBanco() {
       });
     }
   }
-}; */
+};
