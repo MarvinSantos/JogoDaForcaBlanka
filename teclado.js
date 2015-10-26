@@ -122,14 +122,15 @@ function salvaPontos(pagina){
 function palavraAleatoria(arrayPalavras){
   var indice = Math.floor(Math.random() * arrayPalavras.length);
   criarTracos(arrayPalavras[indice]);
+
   var palavraSorteada=arrayPalavras[indice];
   var palavrasLocalStorage = JSON.parse(localStorage["palavrasUsadas"]);
 
-  if (arrayPalavras.length===palavrasLocalStorage.length-1) {
+  if (palavrasLocalStorage.length>10) {
     localStorage["palavrasUsadas"]="[]";
   }
   else if($.inArray(palavraSorteada,palavrasLocalStorage) !== -1){
-     palavraAleatoria(arrayPalavras);
+     palavraAleatoria(palavrasnunes || palavrasnormais);
   }
   else {
      insereLocalStorage();
