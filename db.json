@@ -1,0 +1,87 @@
+{
+  "palavras": [
+    {
+      "palavra": "ANA"
+    },
+    {
+      "palavra": "HTML"
+    },
+    {
+      "palavra": "CANOAS"
+    },
+    {
+      "palavra": "COMPUTADOR"
+    },
+    {
+      "palavra": "PLAYSTATION"
+    },
+    {
+      "palavra": "TELEVISAO"
+    },
+    {
+      "palavra": "BROWSER"
+    },
+    {
+      "palavra": "BOLO"
+    },
+    {
+      "palavra": "MOCHILA"
+    },
+    {
+      "palavra": "SHIMBALAIE"
+    },
+    {
+      "palavra": "INCONSTITUCIONAL"
+    },
+    {
+      "palavra": "INCORRUPTIVEL"
+    },
+    {
+      "palavra": "EXPERIMENTAÇAO"
+    },
+    {
+      "palavra": "JAR JAR BINKS"
+    },
+    {
+      "palavra": "LATIFUNDIARIO"
+    },
+    {
+      "palavra": "REENCARNAÇAO"
+    },
+    {
+      "palavra": "SENSACIONALISMO"
+    },
+    {
+      "palavra": "QUERO IBAGENS"
+    },
+    {
+      "palavra": "MOCHILA"
+    }
+  ],
+  "pessoas": [
+    {
+      "nome": "God",
+      "pontos": 140,
+      "dificuldade": "Normal",
+      "id": "10841575-8a5d-4c3d-9948-fe0e05d720f6"
+    }
+  ],
+  "perguntas": [
+    {
+      "pergunta": "Qual é o fim da picada?",
+      "resposta": "Quando o mosquito vai embora"
+    },
+    {
+      "pergunta": "O que o canibal vegetariano come?",
+      "resposta": "A planta do pé e a batata da perna"
+    },
+    {
+      "pergunta": "O que o advogado do frango foi fazer na delegacia?",
+      "resposta": "Foi soltar a franga"
+    },
+    {
+      "pergunta": "O que se utiliza para fazer omelete de chocolate?",
+      "resposta": "Ovos de páscoa"
+    }
+  ]
+}

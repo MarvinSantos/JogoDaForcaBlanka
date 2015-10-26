@@ -1,14 +1,21 @@
-body {
-   position: relative;
-   width: 100%;
+.center{
+   margin: 200px 460px;
+   height: 140px;
 }
-.centerBox {
-   left: 50%;
-   margin-left: -200px;
-   position: absolute;
-   width: 400px;
+p{
+	color: black;
+	font-family: arial;
+	font-size: 14pt;
 }
-
-h2 {
-   text-align: center;
+#submit{
+	border:1px solid #4B546A;
+	box-shadow: #B7B8B8 0px 1px 0px inset;
+	border-radius: 3px;
+	font-size: 10pt;
+	padding: 5px;
+	background-color: #808080;
+	margin-left: 40%;
+}
+input{
+	margin-bottom: 20px;
 }
