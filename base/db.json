@@ -40,7 +40,7 @@
       "palavra": "EXPERIMENTAÇAO"
     },
     {
-      "palavra": "JAR JAR BINKS"
+      "palavra": "ININTERRUPTO"
     },
     {
       "palavra": "LATIFUNDIARIO"
@@ -52,11 +52,14 @@
       "palavra": "SENSACIONALISMO"
     },
     {
-      "palavra": "QUERO IBAGENS"
+      "palavra": "ESTRANHAMENTE"
     },
     {
       "palavra": "MOCHILA"
-    }
+   },
+   {
+     "palavra": "MASSACHUSSETS"
+   }
   ],
   "pessoas": [
     {
@@ -64,6 +67,12 @@
       "pontos": 140,
       "dificuldade": "Normal",
       "id": "10841575-8a5d-4c3d-9948-fe0e05d720f6"
+    },
+    {
+      "nome": "mhjh",
+      "pontos": 56,
+      "dificuldade": "Normal",
+      "id": "9fcdda46-05f3-4d12-8af1-346a300691df"
     }
   ],
   "perguntas": [
