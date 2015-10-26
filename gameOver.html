@@ -15,7 +15,7 @@
   </header>
   <section class="col col-l-12 col-m-12 col-s-12">
 
-    <div id="posiciona" onclick="escondeDivSmile();"> 
+    <div id="posiciona" onclick="escondeDivSmile();">
       <div class="smile rotate-down-bounce">
         <div class="smile-mouth"></div>
       </div>
@@ -39,8 +39,11 @@
   <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script>
     (function mostraPontuacao(){
-      var pontos = localStorage.getItem('pts');
-      $('#h2Pontos').html(pontos);
+      $.get('http://localhost:3000/pessoas').done(function (elem) {
+          var points = 0;
+          points = elem[elem.length - 1].pontos;
+          $('#h2Pontos').html(points);
+      });
     })();
 
     function escondeDivSmile() {
